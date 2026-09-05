@@ -1,0 +1,412 @@
+.app-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.app-subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  max-width: 520px;
+  font-size: 15px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.search-bar input:focus-visible {
+  outline: 2px solid var(--series-1);
+  outline-offset: 1px;
+}
+
+.search-bar button {
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: none;
+  background: var(--series-1);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.search-bar button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.search-bar button:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.card h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-subtitle {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* Profile card */
+
+.profile-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.profile-info h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.username {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  width: fit-content;
+}
+
+.username:hover {
+  color: var(--series-1);
+}
+
+.bio {
+  margin: 4px 0 0;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.follow-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.follow-counts strong {
+  color: var(--text-primary);
+  font-variant-numeric: normal;
+}
+
+/* Stat tiles (KPI row) */
+
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.stat-tile {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Charts */
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.chart-wrapper {
+  width: 100%;
+}
+
+.legend-text {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.chart-tooltip {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.chart-tooltip-value {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.chart-tooltip-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.empty-note {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Repo list */
+
+.repo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.repo-list-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gridline);
+}
+
+.repo-list-item:last-child {
+  border-bottom: none;
+}
+
+.repo-rank {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  width: 20px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.repo-list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.repo-name {
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--text-primary);
+  width: fit-content;
+}
+
+.repo-name:hover {
+  color: var(--series-1);
+}
+
+.repo-description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.repo-list-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.repo-language {
+  color: var(--text-secondary);
+}
+
+/* Status banners */
+
+.status-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.status-loading {
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.status-error strong {
+  color: var(--critical-text);
+}
+
+.status-warning strong {
+  color: var(--series-4);
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--gridline);
+  border-top-color: var(--series-1);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.app-footer a {
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-meta,
+  .follow-counts {
+    justify-content: center;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .app-header h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .stat-tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .app-shell {
+    padding: 20px 14px 48px;
+  }
+}
