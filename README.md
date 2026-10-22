@@ -74,6 +74,10 @@ of profiles, but it means:
   responses.
 - No API key or secret is required to run or use this project as-is.
 
+## License
+
+MIT — see [LICENSE](LICENSE).
+
 ## Author
 
 Muhammad Aoun Shabbir — [github.com/m-aoun](https://github.com/m-aoun)
